@@ -1,17 +1,17 @@
 firstCard = 10
-secondCard = 13
+secondCard = 11
 totalCard = firstCard + secondCard
 console.log(totalCard)
 let hasBlackJack = false
 // 1. Create a variable called isAlive and assign it to true
 let isAlive = true
 
-if (totalCard < 22){
+if (totalCard <= 20){
     console.log("do you want to draw a new card?")
-    isAlive = false
+   
 
 }
-else if (totalCard === 23){
+else if (totalCard === 21){
     console.log("wohoo! You've got blackjack!")
     hasBlackJack = true
 } 
@@ -20,7 +20,7 @@ else if (totalCard === 23){
 
 else{
     console.log("You're out of the game!")
-    
+    isAlive = false
 }
 
 
