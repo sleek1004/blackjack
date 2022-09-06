@@ -1,10 +1,9 @@
 let firstCard = 10
 let secondCard = 4
- 
+ let Cards = [firstCard, secondCard] //arrays - ordered lists
 
 let total = firstCard + secondCard 
 
-console.log(total)
 
 let hasBlackJack = false
 
@@ -24,7 +23,10 @@ function startGame(){
 
 function renderGame(){
 
-    cardsEL.textContent = "cards: " + firstCard + " " + secondCard
+
+
+
+    cardsEL.textContent = "Cards: " + Cards[0] + " " + Cards[1]
 
     totalEL.textContent = "Total: " + total
 
@@ -47,7 +49,9 @@ function newCard(){
    
     let card = 7 
     total += card
-
+   Cards.push(card)
+   
+   console.log(Cards)
     renderGame()
 }
 
