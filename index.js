@@ -47,10 +47,10 @@ function renderGame(){
 
 function newCard(){
    
-    let card = 7 
+    let card = 12
     total += card
    Cards.push(card)
-   
+
    console.log(Cards)
     renderGame()
 }
