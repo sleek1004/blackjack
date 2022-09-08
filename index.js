@@ -17,6 +17,7 @@ let cardsEL = document.getElementById("cards-el")
 
 
 
+
 function startGame(){
     renderGame()
 }
@@ -26,7 +27,11 @@ function renderGame(){
 
 
 
-    cardsEL.textContent = "Cards: " + Cards[0] + " " + Cards[1]
+    cardsEL.textContent = "Cards: " 
+
+    for(let i =0; i < Cards.length; i++) {
+        cardsEL.textContent +=  Cards[i] + " "
+    }
 
     totalEL.textContent = "Total: " + total
 
@@ -47,7 +52,7 @@ function renderGame(){
 
 function newCard(){
    
-    let card = 12
+    let card = 7
     total += card
    Cards.push(card)
 
@@ -56,8 +61,6 @@ function newCard(){
 }
 
 
-
-  
 
 
 
