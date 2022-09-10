@@ -1,6 +1,7 @@
-let firstCard = 10
-let secondCard = 4
- let Cards = [firstCard, secondCard] //arrays - ordered lists
+
+let firstCard = getRandomCard()
+let secondCard =  getRandomCard()
+ let Cards = [firstCard, secondCard] 
 
 let total = firstCard + secondCard 
 
@@ -15,7 +16,9 @@ let messageEL = document.getElementById("message-el")
 let totalEL = document.getElementById("total-el")
 let cardsEL = document.getElementById("cards-el")
 
-
+function getRandomCard(){
+    return 5
+}
 
 
 function startGame(){
@@ -52,13 +55,18 @@ function renderGame(){
 
 function newCard(){
    
-    let card = 7
+  
+
+    let card =  getRandomCard()
     total += card
    Cards.push(card)
 
    console.log(Cards)
     renderGame()
 }
+
+
+
 
 
 
