@@ -1,13 +1,9 @@
 
 let firstCard = getRandomCard()
 let secondCard =  getRandomCard()
- let Cards = [firstCard, secondCard] 
-
+let Cards = [firstCard, secondCard] 
 let total = firstCard + secondCard 
-
-
 let hasBlackJack = false
-
 let isAlive = true
 let message = ""
 
@@ -17,7 +13,9 @@ let totalEL = document.getElementById("total-el")
 let cardsEL = document.getElementById("cards-el")
 
 function getRandomCard(){
-    return 5
+   
+    let randomNumber = Math.floor( Math.random() * 13) + 1
+    return  randomNumber
 }
 
 
@@ -64,6 +62,9 @@ function newCard(){
    console.log(Cards)
     renderGame()
 }
+
+
+
 
 
 
