@@ -1,5 +1,9 @@
 
-
+let player = {
+       name : "Manuel",
+       chips : 145
+    
+}
 let Cards = [] 
 let total = 0
 let hasBlackJack = false
@@ -10,6 +14,18 @@ let message = ""
 let messageEL = document.getElementById("message-el")
 let totalEL = document.getElementById("total-el")
 let cardsEL = document.getElementById("cards-el")
+
+
+
+let playerEL = document.getElementById("player-el")
+
+
+    playerEL.textContent = player.name + ": $" + player .chips
+
+
+
+
+
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13)+ 1
@@ -64,15 +80,17 @@ function renderGame(){
 }
 
 function newCard(){
-   
-  
-
-    let card =  getRandomCard()
+    if(isAlive === true && hasBlackJack === false) 
+    {let card =  getRandomCard()
     total += card
-   Cards.push(card)
+    Cards.push(card)
+    
+       console.log(Cards)
+        renderGame()
 
-   console.log(Cards)
-    renderGame()
+    }
+   
+    
 }
 
 
